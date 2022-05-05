@@ -19,6 +19,8 @@ import SearchResults from './SearchResults';
 import SEO from './SEO';
 import SkipNavigationLink from './SkipNavigationLink';
 import TaxonomyTerms from './TaxonomyTerms';
+import IMSection from './IMSection';
+import IMSwiper from './IMSwiper';
 
 export {
   Button,
@@ -42,4 +44,6 @@ export {
   SEO,
   SkipNavigationLink,
   TaxonomyTerms,
+  IMSection,
+  IMSwiper
 };

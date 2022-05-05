@@ -12,6 +12,7 @@ import {
 import { NavigationMenu } from 'components';
 
 import styles from './Footer.module.scss';
+import IMSection from 'components/IMSection';
 
 /**
  * The Blueprint's Footer component
@@ -19,120 +20,38 @@ import styles from './Footer.module.scss';
  */
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className="container">
-        {appConfig?.socialLinks && (
-          <div className={styles['social-links']}>
-            <ul aria-label="Social media">
-              {appConfig.socialLinks?.twitterUrl && (
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles['social-icon-link']}
-                    href={appConfig.socialLinks.twitterUrl}
-                  >
-                    <FaTwitter
-                      title="Twitter"
-                      className={styles['social-icon']}
-                    />
-                  </a>
-                </li>
-              )}
-
-              {appConfig.socialLinks?.facebookUrl && (
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles['social-icon-link']}
-                    href={appConfig.socialLinks.facebookUrl}
-                  >
-                    <FaFacebookF
-                      title="Facebook"
-                      className={styles['social-icon']}
-                    />
-                  </a>
-                </li>
-              )}
-
-              {appConfig.socialLinks?.instagramUrl && (
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles['social-icon-link']}
-                    href={appConfig.socialLinks.instagramUrl}
-                  >
-                    <FaInstagram
-                      title="Instagram"
-                      className={styles['social-icon']}
-                    />
-                  </a>
-                </li>
-              )}
-
-              {appConfig.socialLinks?.youtubeUrl && (
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles['social-icon-link']}
-                    href={appConfig.socialLinks.youtubeUrl}
-                  >
-                    <FaYoutube
-                      title="YouTube"
-                      className={styles['social-icon']}
-                    />
-                  </a>
-                </li>
-              )}
-
-              {appConfig.socialLinks?.githubUrl && (
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles['social-icon-link']}
-                    href={appConfig.socialLinks.githubUrl}
-                  >
-                    <FaGithub
-                      title="GitHub"
-                      className={styles['social-icon']}
-                    />
-                  </a>
-                </li>
-              )}
-
-              {appConfig.socialLinks?.linkedinUrl && (
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles['social-icon-link']}
-                    href={appConfig.socialLinks.linkedinUrl}
-                  >
-                    <FaLinkedinIn
-                      title="LinkedIn"
-                      className={styles['social-icon']}
-                    />
-                  </a>
-                </li>
-              )}
-            </ul>
-          </div>
-        )}
-
-        <NavigationMenu
-          className={styles.nav}
-          menuLocation={MENUS.FOOTER_LOCATION}
-        />
-
-        <div className={styles.copyright}>
-          &copy; {new Date().getFullYear()} Blueprint Media &#183; Powered By{' '}
-          <a href="https://wpengine.com/atlas">Atlas</a>
+    <footer className=' my-32'>
+      <IMSection className=' pt-32 border-t'>
+        <div className=' footer-menu-container col-span-6 text-4xl'>
+            <NavigationMenu
+            className={styles.nav}
+            menuLocation={MENUS.FOOTER_LOCATION}
+            />
         </div>
-      </div>
+        <div className='col-span-6 text-2xl'>
+            <p>We take your big ideas and challenge them, research them, draw them, design them, write them, present them, and launch them. Together, with you.</p>
+        </div>
+        <div className='col-span-6 text-2xl'>
+          &copy; Innovatemap {new Date().getFullYear()}, All rights reserved
+        </div>
+        <div className='col-span-6 text-2xl flex flex-row'>
+            <a className='mr-4'>
+                Email
+            </a>
+            <a className='mx-4'>
+                Dribbble
+            </a>
+            <a className='mx-4'>
+                LinkedIn
+            </a>
+            <a className='mx-4'>
+                Twitter
+            </a>
+            <a className='ml-4'>
+                Instagram
+            </a>
+        </div>
+      </IMSection>
     </footer>
   );
 }

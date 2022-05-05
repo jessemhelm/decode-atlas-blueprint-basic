@@ -36,7 +36,7 @@ export default function NavigationMenu({ className, menuLocation, children }) {
       role="navigation"
       aria-label={`${menuItems[0]?.menu.node.name} menu`}
     >
-      <ul className="menu">
+      <ul className="menu text-black font-normal">
         {menuItems.map((item) => {
           const { id, path, label } = item;
           return (
